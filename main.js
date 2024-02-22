@@ -10,8 +10,6 @@ function getComputerChoice() {
   }
 }
 
-console.log(`Computer choice: ${getComputerChoice()}`);
-
 function playRound(playerSelection, computerSelection) {
   if (playerSelection == computerSelection) {
     return "You Tied! Try again.";
@@ -27,9 +25,15 @@ function playRound(playerSelection, computerSelection) {
     return "You Win! Scissors beats Paper!.";
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
     return "You Lost! Rock beats Scissors.";
-}
+  }
 }
 
-const playerSelection = "RocK".toLocaleLowerCase();
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function playGame() {
+  for (let i = 0; i < 4; i++) {
+    let playerChoice = prompt("Enter Your Move: ");
+    console.log(playRound(playerChoice, getComputerChoice()));
+  }
+}
+
+console.log("starting game...");
+playGame();
