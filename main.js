@@ -6,9 +6,11 @@ function getComputerChoice() {
     case 1:
       return "paper";
     case 2:
-      return "scissors"; 
-  } 
+      return "scissors";
+  }
 }
+
+console.log(`Computer choice: ${getComputerChoice()}`);
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection == computerSelection) {
@@ -25,16 +27,9 @@ function playRound(playerSelection, computerSelection) {
     return "You Win! Scissors beats Paper!.";
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
     return "You Lost! Rock beats Scissors.";
-  }
+}
 }
 
-function playGame() {
-  for (let i = 0; i < 5; i++) {
-    let playerChoice = prompt("Enter Your Move: ");
-    console.log(playRound(playerChoice, getComputerChoice()));
-  }
-  console.log(`Game Over!`)
-}
-
-console.log("starting game...");
-playGame();
+const playerSelection = "RocK".toLocaleLowerCase();
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
