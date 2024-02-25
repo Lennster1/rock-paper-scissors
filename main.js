@@ -15,9 +15,9 @@ let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
   if (playerScore >= 5) {
-    results.textContent = "Congratulations! You won!";
+    return "Congratulations! You won!";
   } else if (computerScore >= 5) {
-    results.textContent = "Awwww, you lost dumbass :)";
+    return "Awwww, you lost dumbass :)";
   }
   
   if (playerSelection == computerSelection) {
@@ -54,17 +54,17 @@ rock.addEventListener("click", () => {
   results.textContent = `${playRound(
     "rock",
     getComputerChoice()
-  )} Your score is ${playerScore}`;
+  )} Your score is ${playerScore}, Computer score is ${computerScore}`;
 });
 paper.addEventListener("click", () => {
   results.textContent = `${playRound(
     "paper",
     getComputerChoice()
-  )} Your score is ${playerScore}`;
+  )} Your score is ${playerScore}, Computer score is ${computerScore}`;
 });
 scissors.addEventListener("click", () => {
   results.textContent = `${playRound(
     "scissors",
     getComputerChoice()
-  )} Your score is ${playerScore}`;
+  )} Your score is ${playerScore}, Computer score is ${computerScore}`;
 });
