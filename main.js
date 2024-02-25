@@ -28,13 +28,5 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function playGame() {
-  for (let i = 0; i < 5; i++) {
-    let playerChoice = prompt("Enter Your Move: ");
-    console.log(playRound(playerChoice, getComputerChoice()));
-  }
-  console.log(`Game Over!`)
-}
-
 console.log("starting game...");
 playGame();
