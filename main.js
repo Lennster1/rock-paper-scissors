@@ -31,13 +31,14 @@ function playRound(playerSelection, computerSelection) {
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
+const results = document.querySelector(".results");
 
 rock.addEventListener("click", () => {
-  console.log(playRound("rock", getComputerChoice()));
+  results.textContent = playRound("rock", getComputerChoice());
 });
 paper.addEventListener("click", () => {
-  console.log(playRound("paper", getComputerChoice()));
+  results.textContent = playRound("paper", getComputerChoice());
 });
 scissors.addEventListener("click", () => {
-  console.log(playRound("scissors", getComputerChoice()));
+  results.textContent = playRound("scissors", getComputerChoice());
 });
