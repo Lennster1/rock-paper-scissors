@@ -6,8 +6,8 @@ function getComputerChoice() {
     case 1:
       return "paper";
     case 2:
-      return "scissors"; 
-  } 
+      return "scissors";
+  }
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -28,5 +28,16 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-console.log("starting game...");
-playGame();
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+
+rock.addEventListener("click", () => {
+  console.log(playRound("rock", getComputerChoice()));
+});
+paper.addEventListener("click", () => {
+  console.log(playRound("paper", getComputerChoice()));
+});
+scissors.addEventListener("click", () => {
+  console.log(playRound("scissors", getComputerChoice()));
+});
